@@ -11,3 +11,23 @@
   border-radius: 20px;
   background-size: cover;
 }
+
+
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.light {
+  background-color: rgb(155, 199, 195);
+  color: #333;
+}
+
+.theme{
+  background-color: #d8870e;
+  color: rgb(70, 2, 2);
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
