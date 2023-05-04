@@ -1,17 +1,21 @@
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect}  from "react";
 import './App.css';
 import { FaFutbol } from "react-icons/fa";
-
+import {Switch, Route } from "react-router-dom";
+import Teams from "./components/Teams";
+import NavBar from "./components/NavBar";
+import Standings from "./components/Standings";
 
 function App() {
-  const [data, setData] = useState([])
   const [appClass, setAppClass] = useState(true)
+  const [teams, setTeams] = useState([])
+    useEffect(() => {
+        fetch('https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Kenyan%20Premier%20League')
+          .then((response) => response.json())
+          .then((data)=>setTeams(data.teams));
+    }, []);
 
-  useEffect(() => {
-    fetch('https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Kenyan%20Premier%20League')
-      .then((response) => response.json())
-      .then((data)=>setData(data));
-  }, []);
+
 
   const handleClick = () => {
     if (appClass === 'light') {
@@ -31,6 +35,17 @@ function App() {
           <FaFutbol/> FootyKenyaDB
         </h1>
         <button className="theme" onClick={handleClick}>Toggle Theme</button>
+      </div>
+      <div>
+        <NavBar />
+        <Switch>
+        <Route path="/Standings">
+            <Standings />
+          </Route>
+          <Route exact path="/teams">
+            <Teams teams={teams}/>
+          </Route>
+        </Switch>
       </div>
     </div>
   );

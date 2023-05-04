@@ -21,12 +21,12 @@
 
 .light {
   background-color: rgb(155, 199, 195);
-  color: #333;
+  color: #8b0717;
 }
 
 .theme{
   background-color: #d8870e;
-  color: rgb(70, 2, 2);
+  color: #8b0717;
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 6px;
@@ -34,4 +34,6 @@
 
 body {
   background-color: rgb(155, 199, 195);
+  color: #8b0717;
 }
+
