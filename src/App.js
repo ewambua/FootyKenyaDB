@@ -1,8 +1,14 @@
 import './App.css';
+import { FaRoute } from "react-icons/fa";
 
 function App() {
   return (
-    <h1>The Traveler</h1>
+    <div className='title'>
+      <h1>
+        <FaRoute/>The Traveler
+      </h1>
+    </div>
+
   );
 }
 
