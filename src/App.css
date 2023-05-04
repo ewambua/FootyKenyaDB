@@ -31,3 +31,7 @@
   border-radius: 5px;
   margin-bottom: 6px;
 }
+
+body {
+  background-color: rgb(155, 199, 195);
+}
