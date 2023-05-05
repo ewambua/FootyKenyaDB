@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import Standings from "./components/Standings";
 
 function App() {
+  const [table, setTable] = useState([])
   const [appClass, setAppClass] = useState(true)
   const [teams, setTeams] = useState([])
     useEffect(() => {
@@ -15,7 +16,11 @@ function App() {
           .then((data)=>setTeams(data.teams));
     }, []);
 
-
+    useEffect(() => {
+      fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4745&s=2022-2023')
+        .then((response) => response.json())
+        .then((data)=>setTable(data.table));
+  }, []);
 
   const handleClick = () => {
     if (appClass === 'light') {
@@ -40,7 +45,7 @@ function App() {
         <NavBar />
         <Switch>
         <Route path="/Standings">
-            <Standings />
+            <Standings table={table} />
           </Route>
           <Route exact path="/teams">
             <Teams teams={teams}/>
