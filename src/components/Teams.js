@@ -6,16 +6,20 @@ function Teams({teams}){
 
 
     return(
-        <ul>
+        <div>
             <h3>KPL Football Teams</h3>
             <hr></hr>
-            {teams.map((team) => (
-                <TeamItem
-                    key={team.idTeam}
-                    strTeam={team.strTeam}
-                />
-            ))}
-        </ul>
+            <div className="teams-container">
+                {teams.map((team) => (
+                    <TeamItem
+                        key={team.idTeam}
+                        strTeam={team.strTeam}
+                        strTeamBadge={team.strTeamBadge}
+                        intFormedYear={team.intFormedYear}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }
 

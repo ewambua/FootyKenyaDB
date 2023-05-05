@@ -37,3 +37,42 @@ body {
   color: #8b0717;
 }
 
+table{
+  width: 100%;
+  border-radius: 15px solid black;
+  border-collapse:collapse;
+
+
+}
+tr,td,th,table{
+  border: 1px solid black;
+}
+th{
+  padding: 3px;
+}
+td{
+  padding: 3px;
+}
+
+.heading{
+  background-color: #66077e;
+  color: #fff;
+}
+
+.data{
+  background-color: wheat;
+  color: black;
+}
+
+.teams-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.team > img {
+  width: 250px;
+}
+
+

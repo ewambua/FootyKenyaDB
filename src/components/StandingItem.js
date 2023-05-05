@@ -3,7 +3,7 @@ import React from "react";
 
 function StandingItem({intRank,strTeam,intPlayed,intWin,intDraw,intLoss,intGoalsFor,intGoalsAgainst,intGoalDifference,intPoints}){
     return (
-        <tr >
+        <tr className="data">
             <td>{intRank}</td>
             <td>{strTeam}</td>
             <td>{intPlayed}</td>

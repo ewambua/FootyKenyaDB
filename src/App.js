@@ -44,10 +44,10 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-        <Route path="/Standings">
+        <Route exact path="/Standings">
             <Standings table={table} />
           </Route>
-          <Route exact path="/teams">
+          <Route path="/teams">
             <Teams teams={teams}/>
           </Route>
         </Switch>

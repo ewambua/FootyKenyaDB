@@ -1,12 +1,14 @@
 import React from "react";
 
-function TeamItem({strTeam}){
+function TeamItem({strTeamBadge,strTeam,intFormedYear}){
 
 
     return(
-        <ol>
-            {strTeam}
-        </ol>
+        <div className="team">
+            <img src={strTeamBadge} alt="Logo" />
+            <h3>{strTeam}</h3>
+            <h3>Year Started:{intFormedYear}</h3>
+        </div>
     )
 }
 
