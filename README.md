@@ -40,7 +40,7 @@ D. Authors Info
 
 ### Licence
 
-[MIT License]
+[MIT License](https://github.com/ewambua/FootyKenyaDB/blob/main/LICENSE)
 
 
 ### Authors Info
